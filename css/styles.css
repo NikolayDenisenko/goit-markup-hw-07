@@ -75,6 +75,7 @@ section {
 }
 
 /* body styles */
+
 /* header styses */
 
 .header {
@@ -82,12 +83,14 @@ section {
     padding-bottom: 25px;
 }
 
-.div-header-content {
+.header__content {
     display: flex;
     
     align-items: center;
    
 }
+
+/* LOGOTIPE STYLES */
 
 .logotipe {
     display: flex;
@@ -96,12 +99,19 @@ section {
     font-family: var(--second-font);
     font-weight: 700;
     font-size: 26px;
-    line-height: calc(31/26);
-    
-    
+    line-height: calc(31/26);      
     }
 
-.header-nav {
+.logotipe__text-web {
+    color: #2196F3;}
+.logotipe__text-studio {
+    color: #000000;}
+
+/* END LOGOTIPE STYLES */
+
+/* HEADER NAV STYLES */
+
+.header__nav {
     display: flex;
     
     align-items: center;
@@ -120,8 +130,7 @@ section {
 
 .header-list >li:not(:last-child) {margin-right: 50px;}
 
-.header-text-web {color: #2196F3;}
-.header-text-studio {color: #000000;}
+
 
 .header-item:hover, .header-item:focus {color: #2196F3; transition: cubic-bezier(0.4, 0, 0.2, 1);}
 
