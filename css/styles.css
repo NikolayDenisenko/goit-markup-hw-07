@@ -74,9 +74,9 @@ section {
     padding-bottom: 94px;
 }
 
-/* body styles */
 
-/* header styses */
+
+/* _____HEADER STYLES_____ */
 
 .header {
     padding-top: 25px;
@@ -90,9 +90,9 @@ section {
    
 }
 
-/* LOGOTIPE STYLES */
+/* HEADER logotipe */
 
-.logotipe {
+.header-logotipe {
     display: flex;
     margin-right: 93px;
     
@@ -102,22 +102,22 @@ section {
     line-height: calc(31/26);      
     }
 
-.logotipe__text-web {
+.header-logotipe__text-web {
     color: #2196F3;}
-.logotipe__text-studio {
+.header-logotipe__text-studio {
     color: #000000;}
 
-/* END LOGOTIPE STYLES */
+/* END HEADER logotipe */
 
-/* HEADER NAV STYLES */
+/* HEADER nav */
 
-.header__nav {
+.header-nav {
     display: flex;
     
     align-items: center;
 }
 
-.header-list {
+.header-nav-list {
     display: flex;
     
     
@@ -128,18 +128,36 @@ section {
         
         }
 
-.header-list >li:not(:last-child) {margin-right: 50px;}
+.header-nav-list >li:not(:last-child) {margin-right: 50px;}
 
 
 
-.header-item:hover, .header-item:focus {color: #2196F3; transition: cubic-bezier(0.4, 0, 0.2, 1);}
+.header-nav-list:hover, .header-nav-list:focus {color: #2196F3; transition: cubic-bezier(0.4, 0, 0.2, 1);}
 
-
-.header-item-after {
-    position: relative;
-    
+.header-nav-list__item-after {
+    position: relative;  
 }
 
+.active-link {
+    color: #2196F3;
+}
+
+.active-link::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: 0%;
+    width: 100%;
+    height: 4px;
+    opacity: 1;
+    background: #2196F3;
+    border-radius: 2px;
+}
+
+/* END HEADER nav */
+
+/* HEADER list adres */
 
 .header-list-adress  {
     display: flex;
@@ -155,24 +173,11 @@ section {
 
 .header-list-adress >li:not(:last-child) {margin-right: 50px;}
 
-.header-list-adress:hover, .header-list-adress:focus, .header-list-adress:active {color: #2196F3;}
+.header-list-adress:hover, .header-list-adress:focus {color: #2196F3;}
 
-.active-link {color: #2196F3;}
 
-.active-link::after {
-    display: inline-block;
-    content: "";
-    position: absolute;
-    top: 44px;
-    left: 0%;
-    width: 100%;
-    height: 4px;
-    opacity: 1;
-    background: #2196F3;
-    border-radius: 2px;
-    }
 
-.icon-mail {
+.header-list-adress__icon-mail {
     display: flex;
     margin-right: 10px;
     fill: currentColor;
@@ -180,9 +185,9 @@ section {
     justify-content: center;
     
 }
-.icon-mail:hover,.icon-mail:focus,.icon-mail:active {color: #2196F3; transition: cubic-bezier(0.4, 0, 0.2, 1);}
+.header-list-adress__icon-mail:hover,.header-list-adress__icon-mail:focus,.header-list-adress__icon-mail:active {color: #2196F3; transition: cubic-bezier(0.4, 0, 0.2, 1);}
 
-.icon-tel {
+.header-list-adress__icon-tel {
     display: flex;
     margin-right: 10px;
     fill: currentColor;
@@ -191,9 +196,11 @@ section {
 
 }
 
-.icon-tel:hover,.icon-tel:focus,.icon-tel:active {color: #2196F3;}
+.header-list-adress__icon-tel:hover,.header-list-adress__icon-tel:focus {color: #2196F3;}
 
-/* main styles */
+/* END HEADER list adres */
+
+/* CAP styles */
 
 .cap {
     position: relative;
@@ -210,14 +217,72 @@ section {
     border: none;
 }
 
-.backdrop {
-position: fixed;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-width: 1600px;
-height: 1024px;
-background: rgba(0, 0, 0, 0.2);
+
+
+.cap__container {
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.cap__title {
+    display: inline-block;
+    margin-bottom: 30px;
+
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+
+}
+
+.cap__button {
+    display: flex;
+    width: 216px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    letter-spacing: 0.06em;
+    font-family: inherit;
+    color: #FFFFFF;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: #2196F4;
+    cursor: pointer;
+}
+
+.cap__button:hover,.cap__button:focus,.cap__button:active {background: #188CE8; transition: cubic-bezier(0.4, 0, 0.2, 1);}
+
+/* END CAP styles */
+
+/* Modal window styses - Стилі модального вікна */
+
+.modal-backdrop {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1600px;
+    height: 1024px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal {
@@ -225,24 +290,18 @@ background: rgba(0, 0, 0, 0.2);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
+
     width: 528px;
     height: 581px;
-    
+    padding: 40px;
+        
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
 }
 
-/* Стилі модального вікна */
-
-.backdrop.is-hidden {
-opacity: 0;
-pointer-events: none;
-}
-
-.icon-close-button {
+.modal__icon-close-button {
     position: absolute;
     display: flex;
     align-items: center;
@@ -257,23 +316,12 @@ pointer-events: none;
     cursor: pointer;
 }
 
-.icon-close-button:hover .icon-close-button-svg, .icon-close-button:focus .icon-close-button-svg{
+.modal__icon-close-button:hover, .modal__icon-close-button:focus, .modal__icon-close-button-svg, .modal__icon-close-button-svg  {
     fill: #2196F3;
 }
 
-.modal {
-    padding: 40px;
-    width: 528px;
-    height: 581px;
-}
 
-.modal-group {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.tytle-p {
+.modal__tytle-p {
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
@@ -283,11 +331,19 @@ pointer-events: none;
     color: #212121;
 }
 
-.modal-group-item {
+.modal-group {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.modal-group__item {
     position: relative;
 }
 
-.modal-group-label {
+.modal-group__label {
     display: block;
     margin-bottom: 4px;
     font-weight: 400;
@@ -297,7 +353,7 @@ pointer-events: none;
     color: var(--color-body-second);
 }
 
-.modal-group-input {
+.modal-group__input {
     
     width: 448px;
     height: 40px;
@@ -308,7 +364,17 @@ pointer-events: none;
 
 }
 
-.comment {
+.modal-group__input:hover,
+.modal-group__input:focus {
+    border: 1px solid #2196F3;
+}
+
+.modal-group__input:hover+.modal-group__icon,
+.modal-group__input:focus+.modal-group__icon {
+    fill: var(--accent-color);
+}
+
+.modal-group__comment {
     width: 448px;
     height: 120px;
     margin-bottom: 20px;
@@ -327,7 +393,7 @@ pointer-events: none;
 
 
 
-.modal-group-button {
+.modal-group__button {
     display: flex;    
     width: 200px;
     height: 50px;
@@ -350,23 +416,17 @@ pointer-events: none;
 
 
 
-.modal-icon {
+.modal-group__icon {
     position: absolute;
     left: 12px;
     top: 27px;
 }
 
-.modal-group-input:hover, .modal-group-input:focus {
-border: 1px solid #2196F3;
-}
 
-.modal-group-input:hover + .modal-icon, .modal-group-input:focus+.modal-icon {
-   fill: var(--accent-color);
-   }
 
 /* Стилі для чекбоксу */
 
-.modal-group-checkbox {
+.modal-group__checkbox {
     position: relative;
     display: flex;
     align-items: center;
@@ -374,7 +434,7 @@ border: 1px solid #2196F3;
     margin-bottom: 30px;
 }
 
-.input-polisy {
+.modal-group__input-polisy {
     appearance: none;
     width: 16px;
     height: 15px;
@@ -390,11 +450,11 @@ border: 1px solid #2196F3;
     cursor: pointer;
 }
 
-.input-polisy:checked {
+.modal-group__input-polisy:checked {
     background-size: 16px 15px; transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.label-polisy {
+.modal-group__label-polisy {
     
     width: 100%;
     height: 24px;
@@ -405,7 +465,7 @@ border: 1px solid #2196F3;
     color: var(--color-body-second)
 }
 
-.a-polisy {
+.modal-group__link-polisy {
     color: #2196F3;
 }
 
@@ -413,75 +473,40 @@ border: 1px solid #2196F3;
 
 /* Завершення стилів для чекбоксу */
 
-/* Заверщення стилів модального вікна */
+/* END Modal window styses - Завершення стилів модального вікна */
 
 
-.div-cap {
-        
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+
+
+/* styles Features - Особливості */
+
+.visually-hidden,
+.features__h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.cap-title {
-    display: inline-block;
-    margin-bottom: 30px;
-    
-    
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    
-    
-    }
-
-.cap-button {
-    display: flex;
-    width: 216px;
-    height: 50px;
-    align-items: center;
-    justify-content:center;
-    margin-right: auto;
-    margin-left: auto;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    
-    letter-spacing: 0.06em;
-    font-family: inherit;
-    color: #FFFFFF;
-    background: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border-color: #2196F4;
-    cursor: pointer;
-    }
-
-.cap-button:hover, .cap-button:focus, .cap-button:active {background: #188CE8; transition: cubic-bezier(0.4, 0, 0.2, 1);}
-/* styles features */
-
-.div-features {
-    
-    
-   
-}
-
-.features-list {
+.features__list {
     display: flex;
     gap: 30px;
     justify-content:center;
 }
 
-.features-list-item {
+.features__list-item {
     flex-basis: calc((100%-90px)/4);
 }
     
     
-    .features-list h3{
+    .features__list h3{
     margin-top: 0px;
     margin-bottom: 10px;
     
@@ -490,14 +515,14 @@ border: 1px solid #2196F3;
     font-size: 14px;
     text-transform: uppercase;}
 
-.features-list p {font-family: 'Roboto';
+.features__list p {font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
    
     color: var(--color-body-second);}
 
-.div-features-icon {
+.features__list-icon {
     display: flex;  
     margin-bottom: 30px;
     width: 270px;
@@ -510,37 +535,36 @@ border: 1px solid #2196F3;
     
 }
 
-.icon-antenna {
+.features__list-icon-antenna {
     display: flex;
     
     fill: currentColor;
    }
 
-.icon-clock{
+.features__list-icon-clock{
         display: flex;
 
         fill: currentColor;
     }
 
-.icon-diagram{
+.features__list-icon-diagram{
         display: flex;
 
         fill: currentColor;
     }
 
+.features__list-icon-astronaut {display: flex;
+
+fill: currentColor;
+}
+/* END styles Features - Особливості */
 
 
-
-/* styles we-do */
+/* styles we-do - Чим ми займаємося */
 
 .we-do {padding-top: 0;}
 
-.div-we-do {
-    
-    
-}
-
-.we-do-h2 {
+.we-do__h2 {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -555,11 +579,11 @@ border: 1px solid #2196F3;
 
 .we-do-list > div:not(:last-child) {margin-right: 30px;}
 
-.we-do-img {
+.we-do-list__img {
     position: relative;
 }
 
-.we-do-p {
+.we-do-list__p {
     display: flex;
     position: absolute;
     left: 0;
@@ -578,7 +602,9 @@ border: 1px solid #2196F3;
     
 }
 
-/* styses Our-team */
+/* END styles we-do - Чим ми займаємося */
+
+/* styses Our-team - Наша команда */
 
 .our-team {
     background: #F5F4FA;
@@ -588,9 +614,12 @@ border: 1px solid #2196F3;
     margin-left: auto;
 }
 
-.div-our-team {
-   
-    
+.our-team__h2 {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
 }
 
 .our-team-list {
@@ -615,13 +644,6 @@ border: 1px solid #2196F3;
     
 }
 
-.our-team-h2 {
-    margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    }
 
 .our-team h3 {
     margin-bottom: 10px;
@@ -661,6 +683,9 @@ border: 1px solid #2196F3;
 
 .our-team-icon:hover, .our-team-icon:focus, .our-team-icon:active {background: #2196F3; transition: cubic-bezier(0.4, 0, 0.2, 1);}
 .our-team-icon:hover,.our-team-icon:focus,.our-team-icon:active {color: #FFFFFF; transition: cubic-bezier(0.4, 0, 0.2, 1);}
+
+
+/* END styses Our-team - Наша команда */
 
 /* Regular customers Постійні клієнти */
 
@@ -852,19 +877,7 @@ border: 1px solid #2196F3;
 
     /* main styles */
 
-    .visually-hidden, .features-h2 {
-        position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            border: 0;
-            padding: 0;
-        
-            white-space: nowrap;
-            clip-path: inset(100%);
-            clip: rect(0 0 0 0);
-            overflow: hidden;
-    }
+    
 
 .header-portfolio {
     border: 1px solid #ECECEC;
