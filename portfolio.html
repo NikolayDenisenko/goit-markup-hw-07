@@ -16,32 +16,39 @@
 
 <body>
     <!-- Верх сторінки з активними елементами -->
-<header class="header header-portfolio">
-    <div class="div-header-content container">
-        
-            <a href="#" class="logotipe link"> <span class="header-text-web">Web</span><span class="header-text-studio">Studio</span> </a>
-        <nav class="header-nav">
-            
-            <ul class="header-list list">
-                <li class="header-item-after"><a href="./index.html" class="header-item link"> Студія </a></li>
-                <li class="header-item-after"><a href="#" class="header-item link active-link">Портфоліо</a></li>
-                <li class="header-item-after"><a href="" class="header-item link">Контакти</a></li>
+<header class="header">
+    <div class="header__content container">
+
+        <a class="logotipe link" href="#">
+            <span class="logotipe__web">Web</span>
+            <span class="logotipe__studio">Studio</span>
+        </a>
+
+        <nav class="navigation">
+
+            <ul class="navigation__list list">
+                <li class="navigation__item"><a href="#" class="link"> Студія </a></li>
+                <li class="navigation__item"><a href="./portfolio.html" class="link navigation__link--active">Портфоліо</a></li>
+                <li class="navigation__item"><a href="" class="link">Контакти</a></li>
             </ul>
         </nav>
-        <ul class="header-list-adress list">
+
+        <ul class="contact list">
             <li>
-                <a href="mailto:info@devstudio.com" class="header-list-adress link">
-                    <svg class="icon-mail" width="16" height="12">
+                <a href="mailto:info@devstudio.com" class="contact link">
+                    <svg class="contact__mail" width="16" height="12">
                         <use href="./images/icons.svg#icon-mail"></use>
                     </svg>
                     info@devstudio.com
                 </a>
             </li>
-            <li><a href="tel:+380961111111" class="header-list-adress link">
-                    <svg class="icon-tel" width="10" height="16">
+            <li><a href="tel:+380961111111" class="contact link">
+                    <svg class="contact__tel" width="10" height="16">
                         <use href="./images/icons.svg#icon-tel"></use>
                     </svg>
-                    +38 096 111 11 11</a></li>
+                    +38 096 111 11 11
+                </a>
+            </li>
         </ul>
     </div>
 </header>
